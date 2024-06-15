@@ -1,0 +1,40 @@
+---
+title: Welcome to A11Y Docs
+description: Documentation for your next accessible web project!
+template: splash
+hero:
+  tagline: Documentation for your next accessible web project!
+  image:
+    file: ../../assets/houston.webp
+  actions:
+    - text: Get started
+      link: /get-started/
+      icon: right-arrow
+      variant: primary
+    - text: View on GitHub
+      link: https://github.com/timdujardin/a11y-docs
+      icon: external
+---
+
+import { Card, CardGrid } from "@astrojs/starlight/components";
+
+## The POUR Principles
+
+<CardGrid stagger>
+  <Card title="Perceivable" icon="open-book">
+    Content must be presented in a way that can be perceived by all users,
+    regardless of sensory abilities.
+  </Card>
+  <Card title="Operable" icon="setting">
+    Users should be able to navigate and interact with the content using a
+    variety of input methods.
+  </Card>
+  <Card title="Understandable" icon="puzzle">
+    Information and the operation of the interface must be clear and easy to
+    comprehend for all users.
+  </Card>
+  <Card title="Robust" icon="laptop">
+    The content should be compatible with a wide range of user agents, including
+    assistive technology.
+  </Card>
+</CardGrid>

@@ -1,0 +1,37 @@
+{
+  "name": "a11y-docs",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Accessibility documentation on how to build an accessible website.",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/starlight": "^0.24.2",
+    "astro": "^4.10.2",
+    "sharp": "^0.32.5",
+    "@astrojs/check": "^0.7.0",
+    "typescript": "^5.4.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/timdujardin/a11y-docs.git"
+  },
+  "keywords": [
+    "a11y",
+    "accessibility",
+    "wcag",
+    "universal",
+    "inclusive"
+  ],
+  "author": "Tim Dujardin",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/timdujardin/a11y-docs/issues"
+  },
+  "homepage": "https://github.com/timdujardin/a11y-docs#readme"
+}
