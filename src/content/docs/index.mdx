@@ -16,25 +16,58 @@ hero:
       icon: external
 ---
 
-import { Card, CardGrid } from "@astrojs/starlight/components";
+import { Card, CardGrid, LinkCard } from "@astrojs/starlight/components";
 
-## The POUR Principles
+## Why is digital accessibility ubiquitous?
 
 <CardGrid stagger>
-  <Card title="Perceivable" icon="open-book">
-    Content must be presented in a way that can be perceived by all users,
-    regardless of sensory abilities.
+  <Card title="European legislation" icon="open-book">
+    The Web Accessibility Directive (2020-2021) and the European Accessibility
+    Act (2025) both have a major impact on European states.
   </Card>
-  <Card title="Operable" icon="setting">
-    Users should be able to navigate and interact with the content using a
-    variety of input methods.
+  <Card title="Expand your audience" icon="setting">
+    More than 16% (1 in 6) of the world population has a disability, in Europe
+    that's even 25% (1 in 4). A significant potential market share that you are
+    currently ignoring.
   </Card>
-  <Card title="Understandable" icon="puzzle">
-    Information and the operation of the interface must be clear and easy to
-    comprehend for all users.
+  <Card title="Social responsibility" icon="puzzle">
+    Imagine the positive impact you can have on people with disabilities, it is
+    fighting for the fundamental right to participate in (digital) society.
   </Card>
-  <Card title="Robust" icon="laptop">
-    The content should be compatible with a wide range of user agents, including
-    assistive technology.
+  <Card title="Brand reputation" icon="laptop">
+    It's not top of mind with most governments and companies, so you can make a
+    positive distinction against competition. Challenge eachother to reach
+    digital accessibility excellence!
   </Card>
+</CardGrid>
+
+## The 4 principles of web accessibility
+
+The POUR principles, which stand for Perceivable, Operable, Understandable, and Robust, form the foundation for developing accessible web content.
+
+<CardGrid>
+  <LinkCard
+    title="1. Perceivable"
+    href="/principles/perceivable"
+    description="Content must be presented in a way that can be perceived
+    by all users, regardless of sensory abilities."
+  ></LinkCard>
+  <LinkCard
+    title="2. Operable"
+    href="/principles/operable"
+    description="Users should be able to navigate and interact with the
+    content using a variety of input methods."
+  ></LinkCard>
+  <LinkCard
+    title="3. Understandable"
+    href="/principles/understandable"
+    description="Information and the operation of the interface must be
+    clear and easy to comprehend for all users."
+  ></LinkCard>
+  <LinkCard
+    title="4. Robust"
+    href="/principles/robust"
+    description="Content should be compatible with a wide range of user
+    agents, including assistive technology."
+  ></LinkCard>
 </CardGrid>

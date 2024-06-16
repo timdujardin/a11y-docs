@@ -14,7 +14,7 @@ export default defineConfig({
           label: "Guides",
           items: [
             // Each item here is one entry in the navigation menu.
-            { label: "Page semantics", link: "/guides/page-semantics/" },
+            { label: "Language", link: "/guides/language/" },
           ],
         },
         {
