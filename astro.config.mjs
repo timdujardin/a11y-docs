@@ -3,6 +3,8 @@ import starlight from "@astrojs/starlight";
 
 // https://astro.build/config
 export default defineConfig({
+  site: "https://timdujardin.github.io",
+  base: "a11y-docs",
   integrations: [
     starlight({
       title: "A11Y Docs",
