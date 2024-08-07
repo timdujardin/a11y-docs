@@ -338,4 +338,4 @@ should be rendered but visually hidden to make sure that the semantic informatio
 
 ## Fonts
 
-### Dyslexia fonts
+Serif vs sans-serif, dyslexia fonts, etc.
