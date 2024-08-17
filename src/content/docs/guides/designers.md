@@ -21,10 +21,8 @@ For each page-level design is it advised to discuss structural semantics with a 
 definitely make an initial proposal on how you see the heading structure.
 
 :::tip[WCAG Reference]
-
 Both technique [G141: Organizing a page using headings](https://www.w3.org/TR/WCAG20-TECHS/G141) and technique [H42:
 Using h1-h6 to identify headings](https://www.w3.org/TR/WCAG20-TECHS/H42) can be referred to.
-
 :::
 
 #### Example outline
@@ -304,7 +302,90 @@ Success Criterion [1.4.11 Non-text Contrast (Level AA)](https://www.w3.org/WAI/W
 
 ## Keyboard navigation
 
-### Focus states
+### Focus indicators
+
+#### Introduction
+
+The default color contrast of focus indicators is not consistent between browsers. Moreover, the default color can also conflict with the brand design guidelines.
+
+In Chrome, for example, the default focus indicator is a 1px outline with the color #99c8ff, that color is named
+`-webkit-focus-ring-color`.
+
+```CSS
+*:focus {
+  outline: -webkit-focus-ring-color auto 1px;
+}
+```
+
+Below is a screenshot of the native focus indicator within Chrome, which in many cases is inadequate in terms of digital accessibility.
+
+![The default focus indicator in Chrome](../../../assets/images/chrome-focus-indicator.jpg)
+
+#### Step 1: Level A criteria
+
+:::tip[WCAG Reference]
+Success Criterion [2.4.7: Focus Visible (Level A)](https://www.w3.org/WAI/WCAG21/Understanding/focus-visible).
+:::
+
+To meet the requirements of the "Focus Visible" criterion, it is necessary to have a visible focus indicator for components that are currently in keyboard focus.
+
+Therefore, the initial action to take in order to create accessible focus indicators is to avoid hiding them.
+
+Below is a screenshot of a hidden focus indicator, so as a keyboard user you cannot visually infer which element is active.
+
+![A hidden focus indicator in Chrome, which results in no visual keyboard focus
+state](../../../assets/images/chrome-hidden-focus-indicator.jpg)
+
+#### Step 2: Level AA criteria
+
+:::tip[WCAG Reference]
+Success Criterion [1.4.11 Non-Text Contrast (Level AA)](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html).
+:::
+
+Focus indicators are used to identify a component state (focus). According to the "Non-Text Contrast" criterion, it is
+necessary for focus indicators to exhibit a color contrast ratio of at least 3:1 when compared to adjacent colors.
+
+It is important to note that the term "adjacent colors" here refers to the colors that connect to the focus indicator and not to the component that is in a focused state.
+
+So the contrast ratio depends on the color ánd position of the focus indicator.
+
+:::tip[WCAG Reference]
+Success Criterion [2.4.11 Focus Not Obscured (Minimum) (Level AA)](https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum).
+:::
+
+This criterion means making sure the user can actually see the element or component they are targeting by making sure it is not hidden behind other content on the page.
+
+However, according to this criterion, the component must not be completely hidden. This means that it can be partially hidden, as long as it remains partially visible.
+
+Despite the letter of the law, it is still always a best practice to make the focus indicator fully visible. Elements
+that are partially hidden is generally inadvisable when your goal is to ensure maximum usability.
+
+#### Conclusion
+
+The best approach to design a focus indicator is to use a 3px solid outline or border, preferably with an offset of 4px.
+
+As for the color, you are free to choose, just keep in mind the 3:1 contrast ratio against the background of the focus
+indicator. Especially people with a visual impairment need sufficient contrast, for example: Low vision.
+
+```CSS
+*:focus {
+  outline-color: #000;
+  outline-style: solid;
+  outline-width: 3px;
+  outline-offset: 4px;
+}
+```
+
+If you want to make a distinction between keyboard focus indicator design and mouse/tap focus indicator design, you can! A
+developer needs to use the `:focus-visible` selector instead of the `:focus` selector.
+
+:::note[Keyboard-only focus indicator]
+Today, all modern browsers only show the default focus indicators when they are needed: when navigating the page with a
+keyboard. The focus outline doesn't show up when you click or tap an element; it only shows up when you tab to it with a
+keyboard.
+:::
+
+So if you provide a custom focus indicator design, it is important to continue that same line as modern browsers do, using `:focus-visible`.
 
 ### Focus order
 
