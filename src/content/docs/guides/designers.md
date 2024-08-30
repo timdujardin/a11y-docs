@@ -389,10 +389,99 @@ So if you provide a custom focus indicator design, it is important to continue t
 
 ### Focus order
 
-### Mouse interaction alternatives
+## Screen readers
 
-- Slider with swiping gestures.
-- Drag and drop with dragging gestures.
+The purpose of a screen reader is to assist individuals with visual impairments or learning/reading difficulties in accessing and interacting with digital content. A screen reader is a software application that uses text-to-speech technology to read aloud the text on a computer screen.
+
+### Overview
+
+#### Desktop
+
+- [Desktop Screen Readers Survival Guide - Basic Keyboard Shortcuts](https://dequeuniversity.com/screenreaders/survival-guide)
+- [Desktop Screen Readers Forms Guide](https://dequeuniversity.com/screenreaders/forms-guide)
+
+#### Windows
+
+- [NVDA Keyboard Shortcuts](https://dequeuniversity.com/screenreaders/nvda-keyboard-shortcuts)
+- [JAWS Keyboard Shortcuts](https://dequeuniversity.com/screenreaders/jaws-keyboard-shortcuts)
+- [Narrator Keyboard Shortcuts](https://dequeuniversity.com/screenreaders#:~:text=Narrator%20Keyboard%20Shortcuts)
+- [JAWS Keyboard Shortcuts for Word](https://dequeuniversity.com/screenreaders/jaws-word)
+
+#### Mac
+
+- [VoiceOver Keyboard Shortcuts on a Mac](https://dequeuniversity.com/screenreaders/voiceover-keyboard-shortcuts)
+- [Enabling Keyboard Accessibility on a Mac](https://dequeuniversity.com/mac/keyboard-access-mac)
+- [Using Windows Screen Readers on a Mac](https://dequeuniversity.com/mac/windows-screen-readers)
+
+#### Mobile
+
+- [TalkBack Gestures on Android](https://dequeuniversity.com/screenreaders/talkback-shortcuts)
+- [VoiceOver Gestures on iOS](https://dequeuniversity.com/screenreaders/voiceover-ios-shortcuts)
+
+### Screen reader modes
+
+Screen readers have different modes that cater to specific situations. The two primary categories of circumstances are as follows:
+
+1. Browse mode (page navigation): This mode allows users to navigate within a document using various keystrokes for different tasks. For instance, pressing "H" can help navigate to headings, "G" to graphics, and "T" to tables. This mode is also known as scan mode (in Narrator), browse mode, or document mode.
+
+2. Forms mode (Input or interaction): In this mode, users interact with elements (such as text fields or custom
+   JavaScript widgets), it is important to note that certain keystrokes used for page navigation, like "H" for headings,
+   are disabled in this mode to avoid any conflicts. This mode may have different names, including forms mode, focus
+   mode, or application mode
+
+#### Browse mode
+
+Reading text
+In document mode, or reading mode, screen reader users are able to read text, navigate by words, navigate by characters to hear the spelling of
+words, and so on. This is the default mode of most screen readers.
+Navigating by semantic elements
+When users want to navigate by semantic elements (such as headings, landmarks, tables, graphics, lists, links, etc), they can use the screen
+reader's keyboard shortcuts to go forward or backward through those elements.
+In JAWS and NVDA, document mode or reading mode is the same mode that allows them to navigate by semantic elements.
+In Narrator, users need to enter into "Scan Mode" (by pressing Caps lock + Space bar) to navigate by semantic elements.
+In VoiceOver
+
+#### Forms mode
+
+When in a text field in a form, users want to be able to type text in the form field. Screen readers need to disable all of the keyboard shortcuts
+associated with letters and numbers in order to allow users to type text. If you are using
+[JAWS](https://www.freedomscientific.com/products/software/jaws/), for example, the H key normally takes you to the next
+heading.
+
+But when typing in a form field, you don't want to go to the next heading. You want to type the letter H. To make that possible, JAWS
+automatically switches from document to forms mode, disabling the normal keyboard shortcuts to allow you to type the letters and numbers.
+When typing in a text field in forms mode, screen readers will speak the letter being typed (e.g.
+"H") and allow the character to be typed.
+
+Screen readers generally switch over to forms mode automatically as soon as you put the focus on a form field by tabbing into it. Forms mode is not
+activated when simply reading through the content of a form in regular reading mode or document mode. In other words, the `<form>` tag itself does
+not trigger forms mode. You have to put the keyboard focus on a form field (a text `<input>`, a `<select>` menu, a `<textarea>`, a radio button, etc.) to
+trigger forms mode.
+
+Some screen readers allow users to manually toggle between forms mode and document mode. In
+[NVDA](https://www.nvaccess.org/download/), for example, the keystroke is Insert + Space bar.
+
+### Reserved interactions
+
+#### Carousels
+
+A common aspect is the use of a slider/carousel to maximize horizontal space when vertical space must be limited.
+
+On mobile, swipe gestures are commonly used to navigate through the carousel, quickly omitting the previous and next
+buttons. Important to note here is that screen readers in a mobile context employ swipe gestures to navigate through the page.
+
+With [TalkBack (Android)](https://appt.org/en/docs/android/features/talkback), for example, you have the following interactions as an alternative to keyboard navigation:
+
+- Swipe right with 1 finger to go to the next element
+- Swipe left with 1 finger to go to the previous element
+- Swipe left, right, up, or down with 2 fingers to scroll in that direction
+
+With [VoiceOver (iOS)](https://appt.org/en/docs/ios/features/voiceover), you have similar (reserved) interactions through swiping:
+
+- Swipe right to select the next item
+- Swipe left to select the previous item
+- Two-finger swipe right to move into a group of items
+- Two-finger swipe left to move out of a group of items
 
 ## Forms
 
