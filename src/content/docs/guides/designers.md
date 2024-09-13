@@ -311,7 +311,7 @@ The default color contrast of focus indicators is not consistent between browser
 In Chrome, for example, the default focus indicator is a 1px outline with the color #99c8ff, that color is named
 `-webkit-focus-ring-color`.
 
-```CSS
+```css
 *:focus {
   outline: -webkit-focus-ring-color auto 1px;
 }
@@ -367,7 +367,7 @@ The best approach to design a focus indicator is to use a 3px solid outline or b
 As for the color, you are free to choose, just keep in mind the 3:1 contrast ratio against the background of the focus
 indicator. Especially people with a visual impairment need sufficient contrast, for example: Low vision.
 
-```CSS
+```css
 *:focus {
   outline-color: #000;
   outline-style: solid;
@@ -493,7 +493,7 @@ should be rendered but visually hidden to make sure that the semantic informatio
 
 ### Form validation
 
-- Inline validation close to the corresponding field.
+- Inline validation close to the corresponding field, law of proximity.
 - Error summary on top of the form contains a number of errors and links that bring the (keyboard) user to the relevant field.
 
 ### Error suggestion
@@ -503,8 +503,6 @@ should be rendered but visually hidden to make sure that the semantic informatio
 ## Links
 
 - Underline to make a visual distinction between default text and links, not by color alone.
-- Use links for navigation, by id or by url
-- Don't use links for functional purpose, such as: `<a href="#">`. Use a `<button>` instead.
 
 ## Fonts
 
