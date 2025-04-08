@@ -91,7 +91,7 @@ breakpoints you should definitely do this in consultation with a developer.
 Technique C27: [Making the DOM order match the visual order](https://www.w3.org/TR/WCAG20-TECHS/C27.html).
 :::
 
-![A media with text section consisting of 2 columns, photo on the left and title, description and a call-to-action on the right.](https://i.ibb.co/KKKZs56/media-w-text.jpg)
+![A media with text section consisting of 2 columns, photo on the left and title, description and a call-to-action on the right.](../../../assets/images/media-w-text.jpg)
 
 Should you want to place the image below the text on mobile, at that point the visual order is out of sync with the DOM order, which will cause a diminished user experience.
 
@@ -245,7 +245,7 @@ description" and "descriptive narration".
 
 You can always see audio description availability through this standardised icon.
 
-![Audio Description](https://i.ibb.co/44gnPCx/audio-description.jpg)
+![Audio Description](../../../assets/images/audio-description.jpg)
 
 :::tip[YouTube reference]
 This YouTube video includes audio description as a configuration option: [Assassin's Creed Valhalla: [Audio Description]
@@ -319,7 +319,7 @@ In Chrome, for example, the default focus indicator is a 1px outline with the co
 
 Below is a screenshot of the native focus indicator within Chrome, which in many cases is inadequate in terms of digital accessibility.
 
-![The default focus indicator in Chrome](https://i.ibb.co/sybxwJQ/chrome-focus-indicator.png)
+![The default focus indicator in Chrome](../../../assets/images/chrome-focus-indicator.jpg)
 
 #### Step 1: Level A criteria
 
@@ -334,7 +334,7 @@ Therefore, the initial action to take in order to create accessible focus indica
 Below is a screenshot of a hidden focus indicator, so as a keyboard user you cannot visually infer which element is active.
 
 ![A hidden focus indicator in Chrome, which results in no visual keyboard focus
-state](https://i.ibb.co/tpBFDKC/chrome-hidden-focus-indicator.png)
+state](../../../assets/images/chrome-hidden-focus-indicator.jpg)
 
 #### Step 2: Level AA criteria
 
