@@ -68,7 +68,7 @@ or in case of an overview page with 6 teasers rendered this way:
 
 So depending on the context you can apply `aria-labelledby` or `aria-describedby`, if the link text itself also provides
 specific information (e.g. "Buy now") but insufficient context then it is recommended to use `aria-describedby`. Go to [the
-"Accessible description" page](/a11y-docs/introduction/6-accessible-description/) for more information about `aria-describedby`.
+"Accessible description" page](/a11y-docs/1-introduction/6-accessible-description/) for more information about `aria-describedby`.
 
 ### Use ARIA only if necessary
 

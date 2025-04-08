@@ -14,15 +14,19 @@ export default defineConfig({
       sidebar: [
         {
           label: "Introduction",
-          autogenerate: { directory: "introduction" },
-        },
-        {
-          label: "Guides",
-          autogenerate: { directory: "guides" },
+          autogenerate: { directory: "1-introduction" },
         },
         {
           label: "Step by step",
-          autogenerate: { directory: "step-by-step" },
+          autogenerate: { directory: "2-step-by-step" },
+        },
+        {
+          label: "Guides",
+          autogenerate: { directory: "3-guides" },
+        },
+        {
+          label: "Assistive technology",
+          autogenerate: { directory: "4-assistive-technology" },
         },
       ],
     }),
