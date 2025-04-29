@@ -31,3 +31,10 @@ The underlying format is _"[semantic-role], [accessible-name], [contextual-info]
 ## Definition lists
 
 If you need to associate terms and definitions within a semantic list, you should use `<dl>`.
+For example, you need to render specifications for a car on a car detail page (screenshot).
+
+![A table-like 3-column grid showing specifications of a car, per specification you see title of specification followed
+by the value](../../../../assets/images/definition-list.jpg)
+
+This will ensure that both the term and the value are communicated together so that sufficient context is always provided.
+Also for SEO, an association will then be made available that was not otherwise semantically there.
