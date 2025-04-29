@@ -1,5 +1,6 @@
 import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
+import starlightAutoSidebar from "starlight-auto-sidebar";
 
 // https://astro.build/config
 export default defineConfig({
@@ -7,10 +8,15 @@ export default defineConfig({
   base: "a11y-docs",
   integrations: [
     starlight({
+      plugins: [starlightAutoSidebar()],
       title: "A11Y Docs",
-      social: {
-        github: "https://github.com/timdujardin/a11y-docs",
-      },
+      social: [
+        {
+          icon: "github",
+          label: "GitHub",
+          href: "https://github.com/timdujardin/a11y-docs",
+        },
+      ],
       sidebar: [
         {
           label: "Introduction",
@@ -27,6 +33,10 @@ export default defineConfig({
         {
           label: "Assistive technology",
           autogenerate: { directory: "4-assistive-technology" },
+        },
+        {
+          label: "Testing workflows",
+          autogenerate: { directory: "5-testing-workflows" },
         },
       ],
     }),
